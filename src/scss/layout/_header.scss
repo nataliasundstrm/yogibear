@@ -1,0 +1,51 @@
+.header {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    height: var(--menu-height);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    
+    &__inner {
+        grid-column: inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+
+    .menu-button {
+        background: none;
+        border: 0;
+        padding: 0;
+        height: 40px;
+        width: 26px;
+
+        &__hamburger {
+            height: 2px;
+            width: 100%;
+            background: var(--color-light);
+            position: relative;
+        }
+
+        &__hamburger::before,
+        &__hamburger::after {
+            content: '';
+            height: 2px;
+            width: 100%;
+            left: 0;
+            background: var(--color-light);
+            position: absolute;
+        }
+
+        &__hamburger::before {
+            top: -8px;
+        }
+
+        &__hamburger::after {
+            top: 8px;
+        }
+
+    }
+    
+}
