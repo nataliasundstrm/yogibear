@@ -175,5 +175,13 @@ a {
   transform: translate(-50%, -50%);
   background-color: var(--color-light);
 }
+.hero__arrow, .hero__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__arrow {
+  padding-right: 0.5rem;
+}
 
 /*# sourceMappingURL=style.css.map */
