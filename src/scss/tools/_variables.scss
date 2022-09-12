@@ -1,8 +1,22 @@
+@font-face {
+    font-family: 'Baskerville';
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/fonts/baskerville.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Berlin';
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/fonts/berlinsans-webfont.woff') format('woff');
+}
+
 :root {
 
     // Fonts
-    --font-sans: sans-serif;
-    --font-serif: serif; 
+    --font-serif: 'Baskerville', serif; // ej fötter
+    --font-sans: 'Berlin', sans-serif; // fötter
 
     // Font base & scale 
     --font-base: 1rem; 
