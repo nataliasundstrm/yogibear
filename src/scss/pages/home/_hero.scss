@@ -1,0 +1,52 @@
+.hero {
+   display: grid;
+   grid-template-columns: var(--grid-container); 
+   height: 100vh;
+   background-color: var(--color-black);
+
+   &__inner {
+        grid-column: inner;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+   }
+
+   &__content {
+        text-align: center;
+   }
+
+   &__flower {
+        margin: 0;
+        padding: 0 0 1rem 0;
+   }
+
+   &__title,
+   &__text,
+   &__link {
+       color: var(--color-light);
+       margin: 0;
+       padding: 0;
+    }
+
+    &__text,
+    &__link {
+        font-size: var(--font-size-2);
+    }
+
+    &__text {
+        position: relative;
+        padding: 0.6rem 0 3rem 0;
+    }
+
+    &__text::before {
+        content:'';
+        position: absolute;
+        height: 2px;
+        width: 70px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--color-light);
+    }
+    
+}
