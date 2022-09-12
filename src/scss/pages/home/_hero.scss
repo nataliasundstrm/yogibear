@@ -48,5 +48,16 @@
         transform: translate(-50%, -50%);
         background-color: var(--color-light);
     }
+
+    &__arrow, &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__arrow {
+        padding-right: 0.5rem;
+    }
+
     
 }
