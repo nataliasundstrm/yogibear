@@ -1,19 +1,30 @@
 .hero {
    display: grid;
    grid-template-columns: var(--grid-container); 
-   height: 100vh;
+   min-height: calc(100vh + var(--section-gap-inner));
+   width: 100%;
    background-color: var(--color-black);
 
    &__inner {
         grid-column: inner;
         display: flex;
         justify-content: center;
-        align-items: center;    
+        align-items: center;
+        position: relative;
+   }
+
+   &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // min-width: 600px;
    }
 
    &__content {
         text-align: center;
    }
+
 
    &__flower {
         margin: 0;

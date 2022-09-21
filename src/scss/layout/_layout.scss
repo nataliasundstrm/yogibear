@@ -1,0 +1,16 @@
+.promo {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+        display: flex;
+    }
+
+    &__img {
+        margin-top: calc( var(--section-gap-inner)* -1);
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+}
