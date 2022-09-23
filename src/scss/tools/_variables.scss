@@ -35,13 +35,17 @@
     --color-light: #FAE8CC;  
     --color-lighter: #FFF9EF;
 
+    // Border-radius 
+    --border-radius: 0.75rem;
+
     // Section gaps
     --section-gap: 8rem;
     --section-gap-inner: calc( var(--section-gap) * 0.75 );
     --section-gap-inner-small: calc(  var(--section-gap) * 0.5);
     
     // Grid gaps
-    --grid-gap: 3rem;
+    --grid-gap: 2rem;
+    --grid-gap-big: 6rem;
 
     // Page settings 
     --page-padding: 30px;
@@ -49,7 +53,7 @@
 
     // Content settings
     --content-width: 50rem; 
-    --content-width-small: 40rem;
+    --content-width-small: 25rem;
 
     // Menu settings
     --menu-height: 100px;
