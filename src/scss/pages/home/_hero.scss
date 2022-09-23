@@ -18,7 +18,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        // min-width: 600px;
    }
 
    &__content {
@@ -46,7 +45,7 @@
 
     &__text {
         position: relative;
-        padding: 0.6rem 0 3rem 0;
+        padding: 0.6rem 0 6rem 0;
     }
 
     &__text::before {
@@ -57,7 +56,7 @@
         top: 0;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: var(--color-light);
+        background-color: var(--color-grey);
     }
 
     &__arrow, &__link {
@@ -70,5 +69,5 @@
         padding-right: 0.5rem;
     }
 
-    
 }
+
