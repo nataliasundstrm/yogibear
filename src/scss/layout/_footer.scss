@@ -1,3 +1,5 @@
+@use '../components/buttons' as button;
+
 .footer {
     display: grid;
     grid-template-columns: var(--grid-container);
@@ -22,15 +24,6 @@
         padding: 0;
     }
     
-    &__title  {
-        color: var(--color-light);
-    }
-    
-    &__text,
-    &__copyright {
-        color: var(--color-grey);
-    }
-    
     &__flower {
         padding: 0 0 1rem 0;
     }
@@ -41,7 +34,6 @@
 
     
     &__text {
-        font-size: var(--font-size-2);
         max-width: var(--content-width-small);
         text-align: center;
         position: relative;
@@ -56,18 +48,33 @@
         background-color: var(--color-grey);
         top: 0;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%);
     }
 
     &__link {
-        padding: 3rem 0 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include button.standard (
+            $color: var(--color-light), 
+            $font-size: var(--font-size-1),
+            $hover-color: var(--color-grey),
+            $justify-content: center,
+            $align-items: center,
+            $padding: 3rem 0 0 0
+        )
     }
+
     
     &__arrow {
-        padding-right: 0.5rem;
+        padding-right: 0.75rem;
+    }
+
+    &__link &__link-text {
+        position: relative;
+        transition: all 0.5s;
+        left: 0; 
+    }
+
+    &__link:hover &__link-text {
+        left: 0.25rem; 
     }
 
     &__bottom {
@@ -88,6 +95,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &__copyright {
+        font-size: var(--font-size-1);
     }
 
 }

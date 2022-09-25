@@ -1,5 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
+    color: var(--color-light);
 }
 
 h1 {
@@ -29,12 +30,11 @@ h6 {
 p, a, li, span {
     font-family: var(--font-serif);
     line-height: 1.5;
-    font-size: var(--font-size-1);
+    color: var(--color-grey);
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-light);
-}
+p, li, span {
+    font-size: var(--font-size-2);
 
+}
 
