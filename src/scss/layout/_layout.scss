@@ -1,27 +1,39 @@
+@use '../components/buttons' as button;
 .promo, 
 .gallery {
     background-color: var(--color-lighter);
+
 }
 
-.promo {
-    display: grid;
-    grid-template-columns: var(--grid-container);
-
-    &__inner {
-        grid-column: inner;
-        display: flex;
-    }
-
+.promo,
+.gallery,
+.membership,
+.about {
     &__img {
-        margin-top: calc( var(--section-gap-inner)* -1);
         border-radius: var(--border-radius);
         overflow: hidden;
-
+        
         img {
             border-radius: var(--border-radius);
             overflow: hidden;
         }
     }
+    
+}
+
+.promo {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    
+    &__inner {
+        grid-column: inner;
+        display: flex;
+    }
+    
+    &__img {
+        margin-top: calc( var(--section-gap-inner)* -1);
+    }
+
 }
 
 .gallery {
@@ -55,7 +67,6 @@
     }
 
     &__text {
-        font-size: var(--font-size-2);
         padding-bottom: 1rem;
         color: var(--color-black);
     }
@@ -72,20 +83,10 @@
         grid-column: 9/13;
     }
 
-    &__img {
-       border-radius: var(--border-radius);
-       overflow: hidden;
-
-       img {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-       }
-    }
-
     &__img-text {
         text-align: center;
         padding-top: 1rem;
-        color: var(--color-grey);
+        font-size: var(--font-size-1);
     }
 
 }
@@ -101,18 +102,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: var(--grid-gap-big);
-    }
-
-    &__image {
-        width: 100%;
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        
-        img {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            
-        }
     }
 
     // flex-direction: column; definierar main-axsis (y-led, uppfrån ocn ned) 
@@ -136,12 +125,7 @@
     &__title,
     &__text,
     &__link {
-        color: var(--color-light);
         margin: 0;
-    }
-
-    &__text {
-        color: var(--color-grey);
     }
 
     &__title {
@@ -150,7 +134,6 @@
 
     &__text {
         position: relative; 
-        font-size: var(--font-size-2);
         padding: 0.75rem 0 0 0;
     }
     
@@ -165,15 +148,38 @@
     }
 
     &__link {
-        display: flex;
-        align-items: center;
-        padding: 3rem 0 0 0;
+        @include button.standard (
+            $color: var(--color-light), 
+            $font-size: var(--font-size-1),
+            $hover-color: var(--color-grey),
+            $justify-content: flex-start,
+            $align-items: center,
+            $padding: 3rem 0 0 0
+        )
     }
 
     &__arrow {
-        padding: 0 1rem 0 0;
+        padding: 0 0.75rem 0 0;
+    }
+
+    &__link &__link-text {
+        position: relative;
+        transition: all 0.5s;
+        left: 0; 
+    }
+
+    &__link:hover &__link-text {
+        left: 0.25rem; 
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
     }
 }
+
 
 .about {
     display: grid;
@@ -205,6 +211,11 @@
 
     &__year {
         padding: 0;
+        font-size: var(--font-size-1);
+    }
+
+    &__title {
+        color: var(--color-black);
     }
 
     &__img,
@@ -212,18 +223,7 @@
         padding: 1rem 0 0 0;
     }
 
-    &__img {
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        
-        img {
-           border-radius: var(--border-radius);
-           overflow: hidden;
-        }
-    }
-
     &__text {
-        font-size: var(--font-size-2);
         max-width: var(--content-width);
         margin: 0 auto;
     }

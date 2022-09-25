@@ -1,28 +1,28 @@
-@mixin standard(
-    $background: var(--color-dark), 
+@mixin standard (
     $color: var(--color-light), 
-    $padding: 0.5rem 1rem, 
-    $border-radius: 25px, 
+    $justify-content: center,
+    $align-items: center,
     $font-size: var(--font-size-1),
-    $hover-background: var(--color-accent), 
-    $hover-color: var(--color-dark)
-    ){
-        
-    background-color: $background;
-    color: $color;
-    display: inline-block;
-    text-decoration: none;
+    $hover-color: var(--color-grey),
+    $padding: 3rem 0 0 0
+){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    font-family: var(--sans);
     padding: $padding;
-    border-radius: $border-radius;  
-    font-size: $font-size;
-    font-family: var(--font-sans);
-    border: 0;
+    text-decoration: none;
     cursor: pointer;
+    
+    span {
+        color: $color;
+        font-size: $font-size;
+    }
 
-    &:hover {
-        background-color: $hover-background;
+    span:hover {
         color: $hover-color;
     }
+
 }
 
 
