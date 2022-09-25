@@ -91,6 +91,7 @@ p, a, li, span {
 
 a {
   text-decoration: none;
+  color: var(--color-light);
 }
 
 .promo,
@@ -232,6 +233,47 @@ a {
   padding: 0 1rem 0 0;
 }
 
+.about {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  padding: 6rem 0 6rem 0;
+  background-color: var(--color-lighter);
+}
+.about__inner {
+  grid-column: inner;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.about__flower, .about__title, .about__year {
+  margin: 0;
+}
+.about__flower {
+  padding: 0 0 1rem 0;
+}
+.about__year {
+  padding: 0;
+}
+.about__img, .about__text {
+  padding: 1rem 0 0 0;
+}
+.about__img {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.about__img img {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.about__text {
+  font-size: var(--font-size-2);
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
 .header {
   display: grid;
   grid-template-columns: var(--grid-container);
@@ -273,6 +315,81 @@ a {
 }
 .header .menu-button__hamburger::after {
   top: 8px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  padding: 6rem 0 6rem 0;
+  background-color: var(--color-black);
+}
+.footer__inner {
+  grid-column: inner;
+}
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6rem;
+}
+.footer__flower, .footer__title, .footer__text {
+  margin: 0;
+  padding: 0;
+}
+.footer__title {
+  color: var(--color-light);
+}
+.footer__text, .footer__copyright {
+  color: var(--color-grey);
+}
+.footer__flower {
+  padding: 0 0 1rem 0;
+}
+.footer__title {
+  padding: 0 0 0.25rem 0;
+}
+.footer__text {
+  font-size: var(--font-size-2);
+  max-width: var(--content-width-small);
+  text-align: center;
+  position: relative;
+  padding: 0.75rem 0 0 0;
+}
+.footer__text::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: var(--color-grey);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer__link {
+  padding: 3rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__arrow {
+  padding-right: 0.5rem;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.footer__item {
+  padding-right: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero {
