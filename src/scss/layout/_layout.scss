@@ -115,10 +115,15 @@
         }
     }
 
+    // flex-direction: column; definierar main-axsis (y-led, uppfrån ocn ned) 
+    // justify-content: center; centrerar textinnehållet i y-led, uppifrån och ned 
+    // flex-direction: column - block - innehållet staplat på varandra 
+    // flex-direction: row - inline - innehållet på en rad
+    
     &__content {
         display: flex;
-        flex-direction: column; // main-axsis (y-led, uppfrån ocn ned) 
-        justify-content: center; // textinnehållet centreras i y-led, uppifrån och ned
+        flex-direction: column; 
+        justify-content: center;
         max-width: var(--content-width-small);
     }
 
@@ -168,6 +173,58 @@
     &__arrow {
         padding: 0 1rem 0 0;
     }
+}
+
+.about {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding: 6rem 0 6rem 0;
+    background-color: var(--color-lighter);
+
+    &__inner {
+        grid-column: inner;
+    }
 
 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    &__flower, 
+    &__title,
+    &__year {
+        margin: 0;
+    }
+    
+    &__flower {
+        padding: 0 0 1rem 0;
+    }
+
+    &__year {
+        padding: 0;
+    }
+
+    &__img,
+    &__text {
+        padding: 1rem 0 0 0;
+    }
+
+    &__img {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        
+        img {
+           border-radius: var(--border-radius);
+           overflow: hidden;
+        }
+    }
+
+    &__text {
+        font-size: var(--font-size-2);
+        max-width: var(--content-width);
+        margin: 0 auto;
+    }
 }
